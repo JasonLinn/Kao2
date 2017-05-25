@@ -1,6 +1,7 @@
+//Supertest 是在測試框架中用來模擬 HTTP Request 的套件。
 const supertest = require('supertest')
 const chai = require('chai')
-const app = require('./../index')
+const app = require('./../index_unit')
 
 const expect = chai.expect
 const request = supertest( app.listen() )
@@ -15,6 +16,7 @@ describe( '开始测试demo的GET请求', ( ) => {
           expect(res.body).to.be.an('object')
           expect(res.body.success).to.be.an('boolean')
           expect(res.body.data).to.be.an('string')
+          //通過使用done回調的方法來表示測試完成
           done()
         })
   })
