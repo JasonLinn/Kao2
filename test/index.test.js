@@ -6,9 +6,9 @@ const app = require('./../index_unit')
 const expect = chai.expect
 const request = supertest( app.listen() )
 
-describe( '开始测试demo的GET请求', ( ) => {
+describe( '開始測試demo的GET請求', ( ) => {
   
-  it('测试/getString.json请求', ( done ) => {
+  it('測試/getString.json請求', ( done ) => {
       request
         .get('/getString.json')
         .expect(200)
@@ -21,7 +21,7 @@ describe( '开始测试demo的GET请求', ( ) => {
         })
   })
 
-  it('测试/getNumber.json请求', ( done ) => {
+  it('測試/getNumber.json請求', ( done ) => {
       request
         .get('/getNumber.json')
         .expect(200)
@@ -35,8 +35,8 @@ describe( '开始测试demo的GET请求', ( ) => {
 })
 
 
-describe( '开始测试demo的POST请求', ( ) => {
-  it('测试/postData.json请求', ( done ) => {
+describe( '開始測試demo的POST請求', ( ) => {
+  it('測試/postData.json請求', ( done ) => {
       request
         .post('/postData.json')
         .expect(200)
